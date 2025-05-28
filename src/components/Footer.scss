@@ -1,0 +1,121 @@
+.footer-new {
+  width: 100vw;
+  background: #181e29;
+  padding: 3.5rem 0 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1.5px solid #232b3b;
+}
+.footer-new__main {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.footer-new__col {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.footer-new__brand {
+  min-width: 300px;
+  max-width: 350px;
+  gap: 1.2rem;
+}
+.footer-new__logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #60aaff;
+  margin-bottom: 0.5rem;
+}
+.footer-new__logo-icon {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+.footer-new__logo-text {
+  letter-spacing: 1px;
+  color: #fff;
+}
+.footer-new__desc {
+  color: #c7d0e0;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+.footer-new__socials {
+  display: flex;
+  gap: 1.1rem;
+  margin-top: 0.5rem;
+}
+.footer-new__social {
+  color: #c7d0e0;
+  font-size: 1.3rem;
+  transition: color 0.2s;
+}
+.footer-new__social:hover {
+  color: #60aaff;
+}
+.footer-new__col-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 0.7rem;
+}
+.footer-new__link {
+  color: #c7d0e0;
+  text-decoration: none;
+  font-size: 1.08rem;
+  margin-bottom: 0.2rem;
+  transition: color 0.2s;
+}
+.footer-new__link:hover {
+  color: #60aaff;
+}
+.footer-new__bottom {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #232b3b;
+  padding: 1.2rem 0 0.2rem 0;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.footer-new__copyright {
+  color: #c7d0e0;
+  font-size: 1rem;
+}
+.footer-new__policies {
+  display: flex;
+  gap: 2rem;
+}
+.footer-new__policy-link {
+  color: #c7d0e0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.footer-new__policy-link:hover {
+  color: #a78bfa;
+}
+@media (max-width: 900px) {
+  .footer-new__main {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+  .footer-new__bottom {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}

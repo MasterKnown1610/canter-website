@@ -1,0 +1,97 @@
+.services-page {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 3rem 0 4rem 0;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-page__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.services-page__title--white {
+  color: #fff;
+}
+.services-page__title--purple {
+  color: #a78bfa;
+}
+.services-page__subtitle {
+  color: #c7d0e0;
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.services-page__divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #60aaff 0%, #a78bfa 100%);
+  border-radius: 2px;
+  margin: 0 auto 2.5rem auto;
+}
+.services-page__grid {
+  width: 100%;
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem 2rem;
+  justify-items: center;
+}
+.services-page__card {
+  background: #232b3b;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 300px;
+  max-width: 400px;
+  border-top: 4px solid #60aaff;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.services-page__card--blue {
+  border-top: 4px solid #60aaff;
+}
+.services-page__card--purple {
+  border-top: 4px solid #a78bfa;
+}
+.services-page__icon {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  color: #60aaff;
+}
+.services-page__icon--purple {
+  color: #a78bfa;
+}
+.services-page__card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.services-page__card-desc {
+  color: #c7d0e0;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+.services-page__learn-more {
+  color: #60aaff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.2s;
+}
+.services-page__learn-more:hover {
+  color: #a78bfa;
+}
+.services-page__arrow {
+  font-size: 1.1rem;
+}

@@ -1,0 +1,196 @@
+.about-section {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 4rem 0 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  background: transparent;
+}
+
+.about-section__left {
+  flex: 1.2;
+  max-width: 700px;
+}
+.about-section__title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  color: #fff;
+}
+.about-section__title--accent {
+  color: #60aaff;
+  letter-spacing: 1px;
+}
+.about-section__desc {
+  color: #c7d0e0;
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+.about-section__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2rem 2.5rem;
+}
+.about-section__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+.about-section__feature-icon {
+  font-size: 2.2rem;
+  border-radius: 10px;
+  padding: 0.7rem 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-section__feature-icon--blue {
+  background: #232b3b;
+  color: #60aaff;
+}
+.about-section__feature-icon--purple {
+  background: #a78bfa22;
+  color: #a78bfa;
+}
+.about-section__feature-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+.about-section__feature-desc {
+  color: #c7d0e0;
+  font-size: 1rem;
+}
+
+.about-section__right {
+  flex: 1;
+  min-width: 400px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.about-section__impact-card {
+  background: #181e29;
+  border-radius: 22px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12);
+  padding: 2.2rem 2rem 2.2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  border: 1.5px solid #232b3b;
+}
+.about-section__impact-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+.about-section__impact-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+.about-section__impact-badge {
+  background: #232b3b;
+  color: #60aaff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.4rem 1.2rem;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+}
+.about-section__impact-stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.2rem;
+}
+.about-section__stat {
+  background: #232b3b;
+  border-radius: 12px;
+  padding: 1.2rem 2rem 1.2rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  min-width: 180px;
+  flex: 1;
+}
+.about-section__stat--blue {
+  border-left: 5px solid #60aaff;
+}
+.about-section__stat--purple {
+  border-left: 5px solid #a78bfa;
+}
+.about-section__stat-icon {
+  font-size: 2rem;
+  color: #60aaff;
+}
+.about-section__stat--purple .about-section__stat-icon {
+  color: #a78bfa;
+}
+.about-section__stat-label {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.about-section__stat-value {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.about-section__stat-arrow {
+  color: #4ade80;
+  font-size: 1.2rem;
+  margin-left: 0.2rem;
+}
+.about-section__stat-desc {
+  color: #c7d0e0;
+  font-size: 1rem;
+}
+.about-section__testimonial {
+  margin-top: 1.5rem;
+  background: #181e29;
+  border: 3px solid #a78bfa;
+  border-radius: 14px;
+  padding: 1.5rem 1.5rem 1.2rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+.about-section__testimonial-avatar {
+  background: linear-gradient(135deg, #60aaff 0%, #a78bfa 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2rem;
+}
+.about-section__testimonial-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.about-section__testimonial-quote {
+  color: #fff;
+  font-size: 1.08rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+.about-section__testimonial-author {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.about-section__testimonial-role {
+  color: #c7d0e0;
+  font-size: 0.98rem;
+}

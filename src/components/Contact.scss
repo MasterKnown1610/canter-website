@@ -1,0 +1,194 @@
+.contact-section {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 4rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+}
+
+.contact-section__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+.contact-section__title--accent {
+  color: #a78bfa;
+}
+.contact-section__subtitle {
+  color: #c7d0e0;
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.contact-section__divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #60aaff 0%, #a78bfa 100%);
+  border-radius: 2px;
+  margin: 0 auto 2.5rem auto;
+}
+.contact-section__content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+.contact-section__info {
+  flex: 1;
+  min-width: 320px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.contact-section__info-block {
+  background: none;
+}
+.contact-section__info-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.2rem;
+}
+.contact-section__info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+.contact-section__info-icon {
+  font-size: 1.6rem;
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-section__info-icon--blue {
+  background: #232b3b;
+  color: #60aaff;
+}
+.contact-section__info-icon--purple {
+  background: #a78bfa22;
+  color: #a78bfa;
+}
+.contact-section__info-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+}
+.contact-section__info-value {
+  color: #c7d0e0;
+  font-size: 1rem;
+}
+.contact-section__hours-card {
+  background: #232b3b;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 2rem;
+  margin-top: 1.5rem;
+}
+.contact-section__hours-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.contact-section__hours-row {
+  display: flex;
+  justify-content: space-between;
+  color: #c7d0e0;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-section__form {
+  flex: 2;
+  background: #232b3b;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  min-width: 400px;
+  max-width: 600px;
+}
+.contact-section__form-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.contact-section__form-row {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.contact-section__form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+}
+.contact-section__form-group label {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.contact-section__form-group input,
+.contact-section__form-group textarea {
+  background: #232b3b;
+  border: 1.5px solid #444e5e;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.9rem 1.2rem;
+  outline: none;
+  transition: border 0.2s;
+  resize: none;
+}
+.contact-section__form-group input:focus,
+.contact-section__form-group textarea:focus {
+  border: 1.5px solid #60aaff;
+}
+.contact-section__form-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+.contact-section__form-check input[type="checkbox"] {
+  accent-color: #60aaff;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+.contact-section__privacy-link {
+  color: #60aaff;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.contact-section__privacy-link:hover {
+  color: #a78bfa;
+}
+.contact-section__submit {
+  background: linear-gradient(90deg, #60aaff 0%, #a78bfa 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-section__submit:hover {
+  background: linear-gradient(90deg, #2563ff 0%, #a78bfa 100%);
+}
