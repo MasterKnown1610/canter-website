@@ -1,8 +1,6 @@
 import "./App.scss";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import Testimonial from "./components/Testimonial";
+import HeroFeatures from "./components/HeroFeatures";
 import About from "./components/About";
 import Services from "./components/Services";
 import CaseStudies from "./components/CaseStudies";
@@ -11,12 +9,10 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="canter-app">
+    <div className="app">
       <Header />
       <main>
-        <Hero />
-        <Features />
-        <Testimonial />
+        <HeroFeatures />
         <About />
         <Services />
         <CaseStudies />
