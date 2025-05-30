@@ -204,7 +204,7 @@
 
 @media screen and (max-width: 768px) {
   .contact-section {
-    padding: 3rem 0;
+    // padding: 3rem 0;
   }
 
   .contact-section__title {
@@ -223,7 +223,6 @@
   }
 
   .contact-section__form {
-    min-width: 100%;
     padding: 2rem;
   }
 
@@ -235,7 +234,7 @@
 
 @media screen and (max-width: 480px) {
   .contact-section {
-    padding: 2rem 0;
+    padding: 0;
   }
 
   .contact-section__title {
