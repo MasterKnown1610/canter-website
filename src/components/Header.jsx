@@ -1,32 +1,49 @@
+import { useState } from "react";
 import "./Header.scss";
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="header">
-      <div className="header__logo">
+      <a href="/" className="header__logo">
         <span className="header__logo-icon">⚡</span>
         <span className="header__logo-text">Canter</span>
-      </div>
-      <nav className="header__nav">
-        <a href="#" className="header__link">
-          Home
-        </a>
-        <a href="#" className="header__link">
-          Services
-        </a>
-        <a href="#" className="header__link">
-          Case Studies
-        </a>
-        <a href="#" className="header__link">
+      </a>
+
+      <button
+        className="header__menu-btn"
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        {isMenuOpen ? "✕" : "☰"}
+      </button>
+
+      <nav className={`header__nav ${isMenuOpen ? "active" : ""}`}>
+        <a href="#about" className="header__link" onClick={closeMenu}>
           About
         </a>
-        <a href="#" className="header__link">
-          Contact
+        <a href="#services" className="header__link" onClick={closeMenu}>
+          Services
+        </a>
+        <a href="#case-studies" className="header__link" onClick={closeMenu}>
+          Case Studies
+        </a>
+        <a href="#testimonials" className="header__link" onClick={closeMenu}>
+          Testimonials
+        </a>
+        <a href="#contact" className="header__cta" onClick={closeMenu}>
+          Get Started
         </a>
       </nav>
-      <a href="#" className="header__cta">
-        Get Started
-      </a>
     </header>
   );
 }
