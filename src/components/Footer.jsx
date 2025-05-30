@@ -1,13 +1,14 @@
 import "./Footer.scss";
-
+import logo from "../assets/logo.png";
 function Footer() {
   return (
     <footer className="footer-new">
       <div className="footer-new__main">
         <div className="footer-new__col footer-new__brand">
           <div className="footer-new__logo">
-            <span className="footer-new__logo-icon">⚡</span>
-            <span className="footer-new__logo-text">Canter</span>
+            <span className="footer-new__logo-icon">
+              <img src={logo} alt="Canter" />
+            </span>
           </div>
           <div className="footer-new__desc">
             Transforming businesses with AI-powered solutions that drive

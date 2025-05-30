@@ -9,9 +9,10 @@ html,
   margin: 0;
   padding: 0;
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
-  background: radial-gradient(ellipse at 60% 40%, #232b3b 60%, #181e29 100%);
   color: #fff;
+
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .canter-app {

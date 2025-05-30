@@ -38,8 +38,14 @@
   margin-bottom: 0.5rem;
 }
 .footer-new__logo-icon {
-  font-size: 2rem;
+  width: 8rem;
+  height: 8rem;
   margin-right: 0.5rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .footer-new__logo-text {
   letter-spacing: 1px;

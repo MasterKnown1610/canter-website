@@ -5,7 +5,8 @@ function Hero() {
     <section className="hero">
       <div className="hero__content">
         <h1>
-          <span className="hero__highlight">AI-Powered</span> Business Solutions
+          <span className="hero__highlight">AI-Powered</span>
+          <br /> Business Solutions
         </h1>
         <p className="hero__subtitle">
           Transforming small and medium-scale businesses with cutting-edge AI

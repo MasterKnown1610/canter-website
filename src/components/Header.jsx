@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Header.scss";
+import logo from "../assets/logo.png";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -12,11 +14,35 @@ function Header() {
     setIsMenuOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      const scrollPosition = window.scrollY + 100; // Offset for header height
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute("id");
+
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionTop + sectionHeight
+        ) {
+          setActiveSection(sectionId);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <header className="header">
-      <a href="/" className="header__logo">
-        <span className="header__logo-icon">⚡</span>
-        <span className="header__logo-text">Canter</span>
+      <a href="#home" className="header__logo">
+        <span className="header__logo-icon">
+          <img src={logo} alt="Canter" />
+        </span>
       </a>
 
       <button
@@ -28,22 +54,46 @@ function Header() {
       </button>
 
       <nav className={`header__nav ${isMenuOpen ? "active" : ""}`}>
-        <a href="#about" className="header__link" onClick={closeMenu}>
+        <a
+          href="#about"
+          className={`header__link ${
+            activeSection === "about" ? "active" : ""
+          }`}
+          onClick={closeMenu}
+        >
           About
         </a>
-        <a href="#services" className="header__link" onClick={closeMenu}>
+        <a
+          href="#services"
+          className={`header__link ${
+            activeSection === "services" ? "active" : ""
+          }`}
+          onClick={closeMenu}
+        >
           Services
         </a>
-        <a href="#case-studies" className="header__link" onClick={closeMenu}>
+        <a
+          href="#case-studies"
+          className={`header__link ${
+            activeSection === "case-studies" ? "active" : ""
+          }`}
+          onClick={closeMenu}
+        >
           Case Studies
         </a>
-        <a href="#testimonials" className="header__link" onClick={closeMenu}>
-          Testimonials
-        </a>
-        <a href="#contact" className="header__cta" onClick={closeMenu}>
-          Get Started
+        <a
+          href="#contact"
+          className={`header__link ${
+            activeSection === "contact" ? "active" : ""
+          }`}
+          onClick={closeMenu}
+        >
+          Contact
         </a>
       </nav>
+      <a href="#contact" className="header__cta" onClick={closeMenu}>
+        Get Started
+      </a>
     </header>
   );
 }
