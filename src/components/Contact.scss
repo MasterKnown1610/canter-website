@@ -38,6 +38,7 @@
   gap: 3rem;
   align-items: flex-start;
   justify-content: center;
+  padding: 0 2rem;
 }
 .contact-section__info {
   flex: 1;
@@ -191,4 +192,78 @@
 }
 .contact-section__submit:hover {
   background: linear-gradient(90deg, #2563ff 0%, #a78bfa 100%);
+}
+
+// Media Queries for Responsive Design
+@media screen and (max-width: 1024px) {
+  .contact-section__content {
+    padding: 0 1.5rem;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 0;
+  }
+
+  .contact-section__title {
+    font-size: 2rem;
+  }
+
+  .contact-section__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .contact-section__info {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .contact-section__form {
+    min-width: 100%;
+    padding: 2rem;
+  }
+
+  .contact-section__form-row {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-section {
+    padding: 2rem 0;
+  }
+
+  .contact-section__title {
+    font-size: 1.75rem;
+  }
+
+  .contact-section__subtitle {
+    font-size: 1rem;
+  }
+
+  .contact-section__content {
+    padding: 0 1rem;
+  }
+
+  .contact-section__form {
+    padding: 1.5rem;
+  }
+
+  .contact-section__info-icon {
+    font-size: 1.4rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .contact-section__info-label {
+    font-size: 1rem;
+  }
+
+  .contact-section__info-value {
+    font-size: 0.95rem;
+  }
 }

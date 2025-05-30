@@ -12,6 +12,7 @@
 .about-section__left {
   flex: 1.2;
   max-width: 700px;
+  padding: 0 1.5rem;
 }
 .about-section__title {
   font-size: 2.8rem;
@@ -83,6 +84,7 @@
   flex-direction: column;
   gap: 2.2rem;
   border: 1.5px solid #232b3b;
+  overflow: hidden;
 }
 .about-section__impact-header {
   display: flex;
@@ -193,4 +195,52 @@
 .about-section__testimonial-role {
   color: #c7d0e0;
   font-size: 0.98rem;
+}
+
+@media (max-width: 1024px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .about-section__left {
+    max-width: 100%;
+  }
+
+  .about-section__right {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .about-section__impact-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section__left {
+    max-width: 100%;
+  }
+
+  .about-section__right {
+    max-width: 100%;
+  }
+  .about-section__features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section__left {
+    max-width: 100%;
+  }
+
+  .about-section__right {
+    max-width: 100%;
+  }
+  .about-section__impact-stats {
+    flex-direction: column;
+  }
 }
