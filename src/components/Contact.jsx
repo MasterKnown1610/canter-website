@@ -1,8 +1,75 @@
 import "./Contact.scss";
+import { useState } from "react";
+import useToast from "../hooks/useToast";
+import Toast from "./Toast";
 
 function Contact() {
+  const { toast, showToast, hideToast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+    privacy: false,
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Google Form submission URL
+    const formUrl =
+      "https://docs.google.com/forms/d/e/1FAIpQLScpwN4Sphn6UsqOb5jkZEmg7LoDBC6GKhvN_cH-jTIVG-DYsw/formResponse";
+
+    try {
+      const response = await fetch(formUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+          "entry.1276597779": formData.name,
+          "entry.270335779": formData.email,
+          "entry.1709713200": formData.company,
+          "entry.699694400": formData.message,
+        }).toString(),
+      });
+
+      // Reset form after submission
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        message: "",
+        privacy: false,
+      });
+
+      showToast(
+        "Thank you for your message! We'll get back to you soon.",
+        "success"
+      );
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      showToast(
+        "There was an error submitting your message. Please try again.",
+        "error"
+      );
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
   return (
     <section className="contact-section">
+      {toast.show && (
+        <Toast message={toast.message} type={toast.type} onClose={hideToast} />
+      )}
       <h2 className="contact-section__title">
         Get in <span className="contact-section__title--accent">Touch</span>
       </h2>
@@ -69,35 +136,55 @@ function Contact() {
             </div>
           </div>
         </div>
-        <form className="contact-section__form">
+        <form className="contact-section__form" onSubmit={handleSubmit}>
           <div className="contact-section__form-title">Send us a Message</div>
           <div className="contact-section__form-row">
             <div className="contact-section__form-group">
               <label>Full Name</label>
-              <input type="text" placeholder="John Doe" />
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="John Doe"
+                required
+              />
             </div>
             <div className="contact-section__form-group">
               <label>Email Address</label>
-              <input type="email" placeholder="john@example.com" />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="john@example.com"
+                required
+              />
             </div>
           </div>
           <div className="contact-section__form-group">
             <label>Company Name</label>
-            <input type="text" placeholder="Your Company" />
+            <input
+              type="text"
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
+              placeholder="Your Company"
+              required
+            />
           </div>
           <div className="contact-section__form-group">
             <label>Message</label>
-            <textarea placeholder="How can we help you?" rows={4}></textarea>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="How can we help you?"
+              rows={4}
+              required
+            ></textarea>
           </div>
-          <div className="contact-section__form-check">
-            <input type="checkbox" id="privacy" />
-            <label htmlFor="privacy">
-              I agree to the{" "}
-              <a href="#" className="contact-section__privacy-link">
-                Privacy Policy
-              </a>
-            </label>
-          </div>
+
           <button className="contact-section__submit" type="submit">
             Send Message
           </button>
