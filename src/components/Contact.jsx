@@ -102,7 +102,7 @@ function Contact() {
               <div>
                 <div className="contact-section__info-label">Phone</div>
                 <div className="contact-section__info-value">
-                  +1 (800) 555-0123
+                  +1 (346) 761-9323
                 </div>
               </div>
             </div>
