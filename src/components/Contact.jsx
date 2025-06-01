@@ -113,9 +113,9 @@ function Contact() {
               <div>
                 <div className="contact-section__info-label">Location</div>
                 <div className="contact-section__info-value">
-                  100 Innovation Drive
+                  12234 Queenston Blvd suite 200
                   <br />
-                  Dallas, Texas 75201
+                  Houston, TX 77095, United States
                 </div>
               </div>
             </div>

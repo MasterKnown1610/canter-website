@@ -14,10 +14,10 @@ function Hero() {
           process automation.
         </p>
         <div className="hero__actions">
-          <a href="#" className="hero__btn hero__btn--primary">
+          <a href="#contact" className="hero__btn hero__btn--primary">
             Get Started
           </a>
-          <a href="#" className="hero__btn hero__btn--secondary">
+          <a href="#services" className="hero__btn hero__btn--secondary">
             Learn More
           </a>
         </div>
