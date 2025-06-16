@@ -116,10 +116,10 @@ function About() {
                 streamlined experience."
               </div>
               <div className="about-section__testimonial-author">
-                Dr. Brian Johnson
+                Dr. Janardhan
               </div>
               <div className="about-section__testimonial-role">
-                Medical Director, Westside Health
+                Medical Director
               </div>
             </div>
           </div>
