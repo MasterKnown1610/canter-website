@@ -1,5 +1,6 @@
 import "./Contact.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import useToast from "../hooks/useToast";
 import Toast from "./Toast";
 
@@ -189,6 +190,11 @@ function Contact() {
             Send Message
           </button>
         </form>
+      </div>
+      <div className="contact-section__voice-assistant">
+        <Link to="/voice-assistant" className="contact-section__voice-btn">
+          🎤 Start Voice Assistant
+        </Link>
       </div>
     </section>
   );

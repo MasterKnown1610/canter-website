@@ -193,6 +193,36 @@
   background: linear-gradient(90deg, #2563ff 0%, #a78bfa 100%);
 }
 
+.contact-section__voice-assistant {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  padding: 0 2rem;
+}
+
+.contact-section__voice-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #60aaff 0%, #a78bfa 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  text-align: center;
+}
+
+.contact-section__voice-btn:hover {
+  background: linear-gradient(90deg, #2563ff 0%, #a78bfa 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(96, 170, 255, 0.3);
+}
+
 // Media Queries for Responsive Design
 @media screen and (max-width: 1024px) {
   .contact-section__content {

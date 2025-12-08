@@ -1,0 +1,546 @@
+.business-form-section {
+  width: 100vw;
+  padding: 4rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.business-form-section__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.business-form-section__title--accent {
+  color: #a78bfa;
+}
+
+.business-form-section__subtitle {
+  color: #c7d0e0;
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.business-form-section__divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #60aaff 0%, #a78bfa 100%);
+  border-radius: 2px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.business-form-section__content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.business-form-section__info {
+  flex: 1;
+  min-width: 320px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.business-form-section__info-block {
+  background: none;
+}
+
+.business-form-section__info-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.business-form-section__info-description {
+  color: #c7d0e0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.business-form-section__info-benefits {
+  h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    color: #c7d0e0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+
+    &:before {
+      content: "✓";
+      color: #60aaff;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+.business-form-section__progress-card {
+  background: #232b3b;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 2rem;
+}
+
+.business-form-section__progress-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.business-form-section__progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #444e5e;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+
+.business-form-section__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #60aaff 0%, #a78bfa 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.business-form-section__progress-text {
+  color: #c7d0e0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.business-form-section__form {
+  flex: 2;
+  background: #232b3b;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.business-form-section__form-header {
+  margin-bottom: 1rem;
+}
+
+.business-form-section__form-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.business-form-section__form-subtitle {
+  color: #c7d0e0;
+  font-size: 0.95rem;
+}
+
+.business-form-section__step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.business-form-section__form-row {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.business-form-section__form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+}
+
+.business-form-section__form-group label {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.business-form-section__form-group input,
+.business-form-section__form-group textarea,
+.business-form-section__form-group select {
+  background: #232b3b;
+  border: 1.5px solid #444e5e;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.9rem 1.2rem;
+  outline: none;
+  transition: border 0.2s;
+  resize: none;
+}
+
+.business-form-section__form-group input:focus,
+.business-form-section__form-group textarea:focus,
+.business-form-section__form-group select:focus {
+  border: 1.5px solid #60aaff;
+}
+
+.business-form-section__form-group--error input,
+.business-form-section__form-group--error textarea,
+.business-form-section__form-group--error select {
+  border: 1.5px solid #dc2626;
+  background: #dc262611;
+}
+
+.business-form-section__form-group--error label {
+  color: #dc2626;
+}
+
+.business-form-section__form-group--error input:focus,
+.business-form-section__form-group--error textarea:focus,
+.business-form-section__form-group--error select:focus {
+  border: 1.5px solid #dc2626;
+  box-shadow: 0 0 0 2px #dc262622;
+}
+
+.business-form-section__form-group small {
+  color: #c7d0e0;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+.business-form-section__checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.business-form-section__checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    accent-color: #60aaff;
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
+
+.business-form-section__date-input {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  margin-top: 0.5rem;
+
+  input[type="date"] {
+    flex: 1;
+  }
+}
+
+.business-form-section__add-date-btn {
+  background: #60aaff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #2563ff;
+  }
+}
+
+.business-form-section__date-list {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.business-form-section__date-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #444e5e;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.business-form-section__remove-date-btn {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: #b91c1c;
+  }
+}
+
+.business-form-section__review {
+  h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.business-form-section__review-section {
+  margin-bottom: 2rem;
+
+  h4 {
+    color: #a78bfa;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #444e5e;
+  }
+}
+
+.business-form-section__review-item {
+  color: #c7d0e0;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+
+  strong {
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+.business-form-section__form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #444e5e;
+}
+
+.business-form-section__btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &--primary {
+    background: linear-gradient(90deg, #60aaff 0%, #a78bfa 100%);
+    color: #fff;
+
+    &:hover {
+      background: linear-gradient(90deg, #2563ff 0%, #a78bfa 100%);
+    }
+  }
+
+  &--secondary {
+    background: transparent;
+    color: #c7d0e0;
+    border: 1.5px solid #444e5e;
+
+    &:hover {
+      background: #444e5e;
+      color: #fff;
+    }
+  }
+}
+
+// Media Queries for Responsive Design
+@media screen and (max-width: 1024px) {
+  .business-form-section__content {
+    padding: 0 1.5rem;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .business-form-section__title {
+    font-size: 2rem;
+  }
+
+  .business-form-section__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .business-form-section__info {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .business-form-section__form {
+    padding: 2rem;
+  }
+
+  .business-form-section__form-row {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .business-form-section__form-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .business-form-section {
+    padding: 2rem 0;
+  }
+
+  .business-form-section__info-block {
+    margin: 10px;
+  }
+
+  .business-form-section__form {
+    padding: 1.5rem;
+  }
+
+  .business-form-section__title {
+    font-size: 1.75rem;
+  }
+
+  .business-form-section__subtitle {
+    font-size: 1rem;
+  }
+
+  .business-form-section__content {
+    padding: 0;
+  }
+}
+
+.business-form-section__final-submission {
+  padding: 1rem 0;
+}
+
+.business-form-section__final-header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: #c7d0e0;
+    font-size: 1rem;
+  }
+}
+
+.business-form-section__confirmation-section {
+  background: #232b3b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+
+  h4 {
+    color: #a78bfa;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+}
+
+.business-form-section__confirmation-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+  color: #c7d0e0;
+  font-size: 0.95rem;
+}
+
+.business-form-section__confirmation-icon {
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.business-form-section__submit-notice {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid #60aaff;
+
+  h4 {
+    color: #60aaff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    color: #c7d0e0;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+
+    &:before {
+      content: "→";
+      color: #60aaff;
+      position: absolute;
+      left: 0;
+    }
+  }
+}

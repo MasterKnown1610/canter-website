@@ -1,0 +1,89 @@
+.voice-assistant {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+
+  &__card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 1.75rem;
+  }
+
+  &__subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .status-box {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    min-height: 20px;
+    background-color: #f8f9fa;
+
+    &.status-ready {
+      color: #2ecc71;
+      font-weight: bold;
+    }
+
+    &.status-call {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    &.status-error {
+      color: #e74c3c;
+      background-color: #fce4e4;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 10px;
+
+    &--connect {
+      background-color: #007bff;
+      color: white;
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+
+      &:hover:not(:disabled) {
+        background-color: #0056b3;
+      }
+    }
+
+    &--disconnect {
+      background-color: #e74c3c;
+      color: white;
+
+      &:hover {
+        background-color: #c0392b;
+      }
+    }
+  }
+}

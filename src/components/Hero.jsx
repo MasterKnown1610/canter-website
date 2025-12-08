@@ -1,4 +1,5 @@
 import "./Hero.scss";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -14,9 +15,9 @@ function Hero() {
           process automation.
         </p>
         <div className="hero__actions">
-          <a href="#contact" className="hero__btn hero__btn--primary">
-            Get Started
-          </a>
+          <Link to="/business-form" className="hero__btn hero__btn--primary">
+            Register Business
+          </Link>
           <a href="#services" className="hero__btn hero__btn--secondary">
             Learn More
           </a>

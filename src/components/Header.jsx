@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Header.scss";
 import logo from "../assets/logo.png";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -39,11 +41,11 @@ function Header() {
 
   return (
     <header className="header">
-      <a href="#home" className="header__logo">
+      <Link to="/" className="header__logo">
         <span className="header__logo-icon">
           <img src={logo} alt="Canter" />
         </span>
-      </a>
+      </Link>
 
       <button
         className="header__menu-btn"
@@ -54,46 +56,60 @@ function Header() {
       </button>
 
       <nav className={`header__nav ${isMenuOpen ? "active" : ""}`}>
-        <a
-          href="#about"
-          className={`header__link ${
-            activeSection === "about" ? "active" : ""
-          }`}
-          onClick={closeMenu}
-        >
-          About
-        </a>
-        <a
-          href="#services"
-          className={`header__link ${
-            activeSection === "services" ? "active" : ""
-          }`}
-          onClick={closeMenu}
-        >
-          Services
-        </a>
-        <a
-          href="#case-studies"
-          className={`header__link ${
-            activeSection === "case-studies" ? "active" : ""
-          }`}
-          onClick={closeMenu}
-        >
-          Case Studies
-        </a>
-        <a
-          href="#contact"
-          className={`header__link ${
-            activeSection === "contact" ? "active" : ""
-          }`}
-          onClick={closeMenu}
-        >
-          Contact
-        </a>
+        {location.pathname === "/" ? (
+          <>
+            <a
+              href="#about"
+              className={`header__link ${
+                activeSection === "about" ? "active" : ""
+              }`}
+              onClick={closeMenu}
+            >
+              About
+            </a>
+            <a
+              href="#services"
+              className={`header__link ${
+                activeSection === "services" ? "active" : ""
+              }`}
+              onClick={closeMenu}
+            >
+              Services
+            </a>
+            <a
+              href="#case-studies"
+              className={`header__link ${
+                activeSection === "case-studies" ? "active" : ""
+              }`}
+              onClick={closeMenu}
+            >
+              Case Studies
+            </a>
+            <a
+              href="#contact"
+              className={`header__link ${
+                activeSection === "contact" ? "active" : ""
+              }`}
+              onClick={closeMenu}
+            >
+              Contact
+            </a>
+          </>
+        ) : (
+          <Link to="/" className="header__link" onClick={closeMenu}>
+            Home
+          </Link>
+        )}
       </nav>
-      <a href="#contact" className="header__cta" onClick={closeMenu}>
-        Get Started
-      </a>
+      {location.pathname === "/" ? (
+        <a href="#contact" className="header__cta" onClick={closeMenu}>
+          Get Started
+        </a>
+      ) : (
+        <Link to="/business-form" className="header__cta" onClick={closeMenu}>
+          Register Business
+        </Link>
+      )}
     </header>
   );
 }

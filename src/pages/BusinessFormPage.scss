@@ -1,0 +1,76 @@
+.business-form-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.business-form-page__header {
+  background: #232b3b;
+  border-bottom: 1px solid #444e5e;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.business-form-page__header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.business-form-page__back-link {
+  color: #60aaff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:hover {
+    color: #a78bfa;
+  }
+}
+
+.business-form-page__title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.business-form-page__main {
+  min-height: calc(100vh - 80px);
+}
+
+// Media Queries for Responsive Design
+@media screen and (max-width: 768px) {
+  .business-form-page__header-content {
+    padding: 0 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .business-form-page__title {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .business-form-page__header {
+    padding: 0.8rem 0;
+  }
+
+  .business-form-page__header-content {
+    padding: 0 0.8rem;
+  }
+
+  .business-form-page__title {
+    font-size: 1.1rem;
+  }
+}
