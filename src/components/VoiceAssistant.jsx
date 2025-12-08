@@ -157,24 +157,22 @@ function VoiceAssistant() {
 
         <div className={statusClass}>{status}</div>
 
-        {!isCallActive ? (
-          <button
-            id="btn-connect"
-            className="voice-assistant__btn voice-assistant__btn--connect"
-            onClick={handleConnect}
-            disabled={!isReady}
-          >
-            Start Call
-          </button>
-        ) : (
-          <button
-            id="btn-disconnect"
-            className="voice-assistant__btn voice-assistant__btn--disconnect"
-            onClick={handleDisconnect}
-          >
-            End Call
-          </button>
-        )}
+        <button
+          id="btn-connect"
+          className="voice-assistant__btn voice-assistant__btn--connect"
+          onClick={handleConnect}
+          disabled={!isReady || isCallActive}
+        >
+          Start Call
+        </button>
+        <button
+          id="btn-disconnect"
+          className="voice-assistant__btn voice-assistant__btn--disconnect"
+          onClick={handleDisconnect}
+          //   disabled={!isCallActive}
+        >
+          End Call
+        </button>
       </div>
     </div>
   );

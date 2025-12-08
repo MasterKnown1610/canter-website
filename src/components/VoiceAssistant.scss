@@ -81,7 +81,12 @@
       background-color: #e74c3c;
       color: white;
 
-      &:hover {
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+
+      &:hover:not(:disabled) {
         background-color: #c0392b;
       }
     }
