@@ -1,16 +1,11 @@
 import VoiceAssistant from "../components/VoiceAssistant";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import "./VoiceAssistantPage.scss";
 
 function VoiceAssistantPage() {
   return (
-    <>
-      <Header />
-      <main className="main-content">
-        <VoiceAssistant />
-      </main>
-      <Footer />
-    </>
+    <main className="main-content voice-assistant-page">
+      <VoiceAssistant />
+    </main>
   );
 }
 
