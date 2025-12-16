@@ -18,9 +18,9 @@ function Hero() {
           <Link to="/business-form" className="hero__btn hero__btn--primary">
             Register Business
           </Link>
-          <a href="#services" className="hero__btn hero__btn--secondary">
-            Learn More
-          </a>
+          <Link to="/voice-assistant" className="hero__voice-btn">
+            🎤 Try Voice AI
+          </Link>
         </div>
         <div className="hero__tags">
           <div className="hero__tag">

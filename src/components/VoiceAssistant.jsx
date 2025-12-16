@@ -191,7 +191,7 @@ function VoiceAssistant() {
       <div className="voice-assistant__container">
         <div className="voice-assistant__content">
           <div className="voice-assistant__header">
-            <h1 className="voice-assistant__title">Temple Assistant</h1>
+            <h1 className="voice-assistant__title">Canter Assistant</h1>
             <p className="voice-assistant__subtitle">Web Voice Interface</p>
           </div>
 
